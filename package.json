@@ -1,0 +1,15 @@
+{
+  "name": "nctuplus_mock_server",
+  "version": "1.0.0",
+  "description": "a mock api server for nctu+",
+  "main": "route.js",
+  "author": "yanglin",
+  "license": "MIT",
+  "dependencies": {
+    "json-server": "^0.12.1"
+  },
+  "scripts": {
+    "seed": "node seed/index.js > database.json",
+    "server": "node_modules/.bin/json-server database.json --port=9487 --delay=500"
+  }
+}
