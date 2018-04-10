@@ -6,10 +6,11 @@
   "author": "yanglin",
   "license": "MIT",
   "dependencies": {
-    "json-server": "^0.12.1"
+    "faker": "^4.1.0",
+    "json-server": "^0.12.1",
+    "moment": "^2.22.0"
   },
   "scripts": {
-    "seed": "node seed/index.js > database.json",
-    "server": "node_modules/.bin/json-server database.json --port=9487 --delay=500"
+    "server": "node_modules/.bin/json-server seed/index.js --port=9487 --delay=500 --routes=route.json"
   }
 }

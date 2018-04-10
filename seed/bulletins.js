@@ -1,15 +1,17 @@
 
-let faker = require('faker')
+const faker = require('faker')
+const moment = require('moment')
+
 faker.locale = 'zh_TW'
 
-const bulletinsSeeder = (amount) => (
-  new Array(amount).fill(0).map((value, index) => ({
+const BulletinsSeeder = (amount) => (
+  Array(amount).fill(0).map((value, index) => ({
     id: index + 1,
-    title: faker.random.words(3),
-    created_at: faker.date.past(),
-    updated_at: faker.date.past(),
-    type: faker.random.number(2)
+    title: faker.random.words(2),
+    type: faker.random.number(2),
+    created_at: moment(faker.date.past()).format('YYYY/MM/DD hh:mm:ss'),
+    updated_at: moment(faker.date.past()).format('YYYY/MM/DD hh:mm:ss'),
   }))
 )
 
-module.exports = bulletinsSeeder
+module.exports = BulletinsSeeder

@@ -1,13 +1,20 @@
 
-const bulletinsSeeder = require('./bulletins')
-const coursesSeeder = require('./courses')
-const userCoursesSeeder = require('./userCourses')
+const BulletinsSeeder = require('./Bulletins')
+const CoursesSeeder = require('./Courses')
+const UserCoursesSeeder = require('./UserCourses')
+const BooksSeeder = require('./Books')
+const PastExamsSeeder = require('./PastExams')
+const EventsSeeder = require('./Events')
+const DiscussesSeeder = require('./Discusses')
+
 
 const seeder = () => ({
-  bulletins: bulletinsSeeder(100),
-  courses: coursesSeeder(100),
-  userCourses: userCoursesSeeder(100),
-  
+  bulletins: BulletinsSeeder(10),
+  courses: CoursesSeeder(500),
+  user_courses: UserCoursesSeeder(10),
+  books: BooksSeeder(100),
+  past_exams: PastExamsSeeder(100),
+  events: EventsSeeder(30),
+  discusses: DiscussesSeeder(100)
 })
-console.log(JSON.stringify(seeder()))
 module.exports = seeder
