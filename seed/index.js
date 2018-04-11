@@ -1,20 +1,23 @@
 
-const BulletinsSeeder = require('./Bulletins')
-const CoursesSeeder = require('./Courses')
-const UserCoursesSeeder = require('./UserCourses')
-const BooksSeeder = require('./Books')
-const PastExamsSeeder = require('./PastExams')
-const EventsSeeder = require('./Events')
-const CommentsSeeder = require('./Comments')
+const model_factory = require('./model_factory')
+const faker = require('faker')
 
+const Bulletin = require('./Bulletin')
+const Course = require('./Course')
+const User = require('./User')
+const Book = require('./Book')
+const PastExam = require('./PastExam')
+const Event = require('./Event')
+const Comment = require('./Comment')
 
 const seeder = () => ({
-  bulletins: BulletinsSeeder(10),
-  courses: CoursesSeeder(500),
-  user_courses: UserCoursesSeeder(10),
-  books: BooksSeeder(100),
-  past_exams: PastExamsSeeder(100),
-  events: EventsSeeder(30),
-  comments: CommentsSeeder(100)
+  bulletins: model_factory(Bulletin, 15),
+  courses: model_factory(Course, 500).sort((a, b) => a.semester > b.semester),
+  users: model_factory(User, 10),
+  books: model_factory(Book, 100),
+  past_exams: model_factory(PastExam, 100),
+  events: model_factory(Event, 30),
+  comments: model_factory(Comment, 100),
+  login: [{ token: faker.internet.password() }],
 })
 module.exports = seeder
