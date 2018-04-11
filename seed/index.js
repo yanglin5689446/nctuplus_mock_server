@@ -5,7 +5,7 @@ const UserCoursesSeeder = require('./UserCourses')
 const BooksSeeder = require('./Books')
 const PastExamsSeeder = require('./PastExams')
 const EventsSeeder = require('./Events')
-const DiscussesSeeder = require('./Discusses')
+const CommentsSeeder = require('./Comments')
 
 
 const seeder = () => ({
@@ -15,6 +15,6 @@ const seeder = () => ({
   books: BooksSeeder(100),
   past_exams: PastExamsSeeder(100),
   events: EventsSeeder(30),
-  discusses: DiscussesSeeder(100)
+  comments: CommentsSeeder(100)
 })
 module.exports = seeder

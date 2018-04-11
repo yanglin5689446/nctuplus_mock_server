@@ -4,7 +4,7 @@ const moment = require('moment')
 
 faker.locale = 'zh_TW'
 
-const DiscussesSeeder = (amount) => (
+const CommentsSeeder = (amount) => (
   Array(25).fill(0).map((value, index) => ({
     id: index + 1,
     course: faker.random.word(2),
@@ -19,4 +19,4 @@ const DiscussesSeeder = (amount) => (
   }))
 )
 
-module.exports = DiscussesSeeder
+module.exports = CommentsSeeder
