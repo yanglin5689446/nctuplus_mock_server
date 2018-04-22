@@ -11,6 +11,6 @@
     "moment": "^2.22.0"
   },
   "scripts": {
-    "server": "node_modules/.bin/json-server seed/index.js --port=9487 --delay=500 --routes=route.json"
+    "server": "node index.js"
   }
 }
