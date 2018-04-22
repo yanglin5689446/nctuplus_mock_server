@@ -16,7 +16,7 @@ const seeder = () => ({
   users: model_factory(User, 10),
   books: model_factory(Book, 100),
   past_exams: model_factory(PastExam, 100),
-  events: model_factory(Event, 30),
+  events: model_factory(Event, 80),
   comments: model_factory(Comment, 100),
   login: [{ token: faker.internet.password() }],
 })
