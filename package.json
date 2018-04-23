@@ -9,7 +9,8 @@
     "chalk": "^2.4.0",
     "faker": "^4.1.0",
     "json-server": "^0.12.1",
-    "moment": "^2.22.0"
+    "moment": "^2.22.0",
+    "url-pattern": "^1.0.3"
   },
   "scripts": {
     "server": "node index.js"
