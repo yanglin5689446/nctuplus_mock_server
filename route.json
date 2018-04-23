@@ -1,3 +1,4 @@
 {
-    "/user/courses": "/user_courses"
+    "/user/courses": "/user_courses",
+    "/api/events": "/events"
 }
